@@ -35,8 +35,7 @@
     "singleQuote": true
   },
   "dependencies": {
-    "@remix-run/node": "^2.12.1",
-    "express": "^4.21.0"
+    "@remix-run/node": "^2.12.1"
   },
   "devDependencies": {
     "prettier": "^3.3.3"

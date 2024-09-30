@@ -1,0 +1,44 @@
+{
+  "name": "@exortek/remix-express",
+  "version": "1.0.0",
+  "description": "Express server request handler for Remix",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,json,mjs}\"",
+    "lint:prettier": "prettier --check \"**/*.{js,json,mjs}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExorTek/remix-express.git"
+  },
+  "keywords": [
+    "remix",
+    "express",
+    "handler"
+  ],
+  "author": "ExorTek - https://github.com/ExorTek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExorTek/remix-express/issues"
+  },
+  "homepage": "https://github.com/ExorTek/remix-express#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "yarn@4.5.0",
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "printWidth": 120,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@remix-run/node": "^2.12.1",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}

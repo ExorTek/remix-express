@@ -164,23 +164,23 @@ app.listen(3000, () => {
 
 3. Update the package.json dev, start and build commands
 
-    ```json
+```json
     {
         "scripts": {
             "dev": "cross-env NODE_ENV=development node server.mjs",
             "start": "cross-env NODE_ENV=production node server.mjs"
         }
     }
-    ```
+```
 4. Run the following command to start the server
 
-    ```bash
-    npm run dev
-    ```
+```bash
+npm run dev
+```
    OR
-    ```bash
-    yarn dev
-    ```
+```bash
+yarn dev
+```
 
 ## License
 

@@ -18,7 +18,7 @@ const url = require('node:url');
  * @returns {Function} Express middleware function.
  */
 const remixExpress =
-  ({ build, getLoadContext, mode }) =>
+  ({ build, getLoadContext, mode = process.env.NODE_ENV || 'development' }) =>
   async (req, res, next) => {
     try {
       const remixRequestHandler = createRemixRequestHandler(build, mode);
@@ -128,17 +128,16 @@ const createRemixExpressApp = async ({
   express = require('express'),
   buildOptions = {
     buildDirectory: 'build',
-    clientDirectory: 'public',
+    clientDirectory: 'client',
     serverDirectory: 'server',
     serverBuildFile: 'index.js',
   },
-  mode = process.env.NODE_ENV,
+  mode = process.env.NODE_ENV || 'development',
   expressStaticOptions = {},
   viteOptions = {},
 }) => {
   const app = express();
   const cwd = process.cwd();
-
   const clientDirectory = path.join(cwd, buildOptions.buildDirectory, buildOptions.clientDirectory);
 
   const serverBuildUrl = url.pathToFileURL(
@@ -148,7 +147,7 @@ const createRemixExpressApp = async ({
   let viteDevServer = undefined;
 
   if (mode === 'development') {
-    const vite = await import('vite');
+    const vite = await require('vite');
     viteDevServer = await vite.createServer({
       ...viteOptions,
       server: { middlewareMode: true, ...viteOptions?.server },
@@ -179,5 +178,4 @@ const createRemixExpressApp = async ({
 module.exports = {
   createRemixExpressApp,
   remixExpress,
-  default: createRemixExpressApp,
 };

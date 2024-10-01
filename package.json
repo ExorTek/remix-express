@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "format": "prettier --write \"**/*.{js,json,mjs}\"",
-    "lint:prettier": "prettier --check \"**/*.{js,json,mjs}\""
+    "format": "prettier --write \"**/*.{js,json,ts}\"",
+    "test:tsd": "tsd types/",
+    "test:jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --forceExit"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,11 @@
     "@remix-run/node": "^2.12.1"
   },
   "devDependencies": {
-    "prettier": "^3.3.3"
+    "@types/express": "^5.0.0",
+    "express": "^4.21.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "tsd": "^0.31.2",
+    "vite": "^5.4.8"
   }
 }

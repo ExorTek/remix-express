@@ -1,6 +1,6 @@
 {
   "name": "@exortek/remix-express",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Express server request handler for Remix",
   "main": "index.js",
   "type": "commonjs",

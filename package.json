@@ -1,6 +1,6 @@
 {
   "name": "@exortek/remix-express",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Express server request handler for Remix",
   "main": "index.js",
   "type": "commonjs",
@@ -8,7 +8,7 @@
   "scripts": {
     "format": "prettier --write \"**/*.{js,json,ts}\"",
     "test:tsd": "tsd types/",
-    "test:jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --forceExit"
+    "test:node": "node --watch ./test/index.test.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "yarn@4.9.2",
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 2,
@@ -37,15 +37,14 @@
     "singleQuote": true
   },
   "dependencies": {
-    "@remix-run/node": "^2.15.2"
+    "@remix-run/node": "^2.16.8"
   },
   "devDependencies": {
-    "@types/express": "^5.0.0",
-    "express": "^4.21.2",
-    "jest": "^29.7.0",
-    "prettier": "^3.4.2",
-    "tsd": "^0.31.2",
-    "vite": "^6.0.11"
+    "@types/express": "^5.0.3",
+    "express": "^5.1.0",
+    "prettier": "^3.5.3",
+    "tsd": "^0.32.0",
+    "vite": "^6.3.5"
   },
   "files": [
     "index.js",
